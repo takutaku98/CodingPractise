@@ -1,0 +1,17 @@
+services:
+  # 通常のテスト実行: docker compose run --rm test
+  # テスト絞り込み:   docker compose run --rm test --filter "FullyQualifiedName~TwoSum"
+  test:
+    build:
+      context: .
+      target: test
+
+  # テストデバッグ: docker compose run --rm debug
+  # testhost がアタッチ待ちになるので、VS Code の「Docker: attach to testhost」でアタッチする
+  debug:
+    build:
+      context: .
+      target: debug
+    container_name: codingpractise-debug
+    stdin_open: true
+    tty: true

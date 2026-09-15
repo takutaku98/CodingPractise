@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // docker compose run --rm debug でテストを起動した後、
+            // この構成でアタッチし、表示された testhost の PID を選ぶ
+            "name": "Docker: attach to testhost",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickRemoteProcess}",
+            "pipeTransport": {
+                "pipeProgram": "docker",
+                "pipeArgs": ["exec", "-i", "codingpractise-debug"],
+                "debuggerPath": "/vsdbg/vsdbg",
+                "pipeCwd": "${workspaceFolder}",
+                "quoteArgs": false
+            },
+            "sourceFileMap": {
+                "/src": "${workspaceFolder}"
+            },
+            "justMyCode": true
+        }
+    ]
+}
