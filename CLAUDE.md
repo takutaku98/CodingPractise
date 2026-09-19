@@ -31,6 +31,10 @@ Dockerfile is multi-stage: `build` (restore+build, csproj copied first for layer
 - `LeetCode.Tests/{番号}-{問題名}/{Name}Tests.cs` — mirrors the same numbered folder structure, namespaced `LeetCode.Tests.{ProblemName}`.
 - Top-level `README.md` has a problem index table (`# | 問題 | 解説`) — add a row here when adding a new problem.
 
+### Practice/ (data-structure drills)
+
+`Practice/{NN}-{Name}/` + `Practice.Tests/{NN}-{Name}/` — from-scratch implementations of data structures (see `STUDY_PLAN.md` for the roadmap and rules). Not LeetCode problems: no README/index row needed. Implementations must not use BCL collections (`T[]` and `Array.Copy` only); tests may use them as a model oracle. Namespace is flat `Practice` / `Practice.Tests`. Skeleton tests are `Skip`ped until implemented.
+
 ### Test pattern per problem
 
 Every problem gets exactly two kinds of tests:

@@ -11,6 +11,9 @@
 
 問題ごとにクラス名が `Solution` で被るため、名前空間(例: `LeetCode.TwoSum`)で分ける。
 
+- `Practice/` — データ構造の自作練習ライブラリ(`Practice/番号-名前/`)。`Practice.Tests/` に同じ構成でテストを置く
+- [STUDY_PLAN.md](STUDY_PLAN.md) — Arai60 を解けるようになるための学習計画(週 15 時間 × 約 8 週)
+
 ## 実行方法
 
 ```bash
