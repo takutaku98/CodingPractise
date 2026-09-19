@@ -5,6 +5,8 @@ WORKDIR /src
 COPY CodingPractise.slnx ./
 COPY LeetCode/LeetCode.csproj LeetCode/
 COPY LeetCode.Tests/LeetCode.Tests.csproj LeetCode.Tests/
+COPY Practice/Practice.csproj Practice/
+COPY Practice.Tests/Practice.Tests.csproj Practice.Tests/
 RUN dotnet restore CodingPractise.slnx
 
 COPY . .

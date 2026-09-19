@@ -1,4 +1,6 @@
 <Solution>
   <Project Path="LeetCode.Tests/LeetCode.Tests.csproj" />
   <Project Path="LeetCode/LeetCode.csproj" />
+  <Project Path="Practice.Tests/Practice.Tests.csproj" />
+  <Project Path="Practice/Practice.csproj" />
 </Solution>
